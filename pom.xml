@@ -10,6 +10,7 @@
 
     <modules>
         <module>papaya-api</module>
+        <module>papaya-domain</module>
         <module>papaya-dao</module>
         <module>papaya-service</module>
         <module>papaya-web</module>
@@ -58,9 +59,15 @@
     
     <dependencyManagement>
         <dependencies>
-        <dependency>
-            <groupId>${project.groupId}</groupId>
+    		<dependency>
+    			<groupId>${project.groupId}</groupId>
                 <artifactId>papaya-api</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+    		<dependency>
+				<groupId>${project.groupId}</groupId>
+                <artifactId>papaya-domain</artifactId>
                 <version>${project.version}</version>
             </dependency>
 

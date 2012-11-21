@@ -1,18 +1,19 @@
-package com.epam.papaya.api.apartment;
+package com.epam.papaya.domain.apartment;
 
 import java.util.List;
 import java.util.Map;
 
-import com.epam.papaya.api.StoredObject;
+import com.epam.papaya.api.apartment.*;
+import com.epam.papaya.domain.StoredObject;
 
 /**
  * @author Tregubenkov_Evgenij
  */
-public class Apartment extends StoredObject {
+public class Apartment extends StoredObject implements IApartment {
 
     private Integer number;
 
-    private List<Room> rooms;
+    private List<IRoom> rooms;
 
     private RoomType type;
 
@@ -28,128 +29,92 @@ public class Apartment extends StoredObject {
 
     private Integer capacity;
 
-    /**
-     * @return the number
-     */
+    /** {@inheritDoc} */
     public Integer getNumber() {
         return number;
     }
 
-    /**
-     * @param number the number to set
-     */
+    /** {@inheritDoc} */
     public void setNumber(Integer number) {
         this.number = number;
     }
 
-    /**
-     * @return the rooms
-     */
-    public List<Room> getRooms() {
+    /** {@inheritDoc} */
+    public List<IRoom> getRooms() {
         return rooms;
     }
 
-    /**
-     * @param rooms the rooms to set
-     */
-    public void setRooms(List<Room> rooms) {
+    /** {@inheritDoc} */
+    public void setRooms(List<IRoom> rooms) {
         this.rooms = rooms;
     }
 
-    /**
-     * @return the type
-     */
+    /** {@inheritDoc} */
     public RoomType getType() {
         return type;
     }
 
-    /**
-     * @param type the type to set
-     */
+    /** {@inheritDoc} */
     public void setType(RoomType type) {
         this.type = type;
     }
 
-    /**
-     * @return the price
-     */
+    /** {@inheritDoc} */
     public Double getPrice() {
         return price;
     }
 
-    /**
-     * @param price the price to set
-     */
+    /** {@inheritDoc} */
     public void setPrice(Double price) {
         this.price = price;
     }
 
-    /**
-     * @return the area
-     */
+    /** {@inheritDoc} */
     public Double getArea() {
         return area;
     }
 
-    /**
-     * @param area the area to set
-     */
+    /** {@inheritDoc} */
     public void setArea(Double area) {
         this.area = area;
     }
 
-    /**
-     * @return the status
-     */
+    /** {@inheritDoc} */
     public ApartmentStatus getStatus() {
         return status;
     }
 
-    /**
-     * @param status the status to set
-     */
+    /** {@inheritDoc} */
     public void setStatus(ApartmentStatus status) {
         this.status = status;
     }
 
-    /**
-     * @return the options
-     */
+    /** {@inheritDoc} */
     public Map<String, Object> getOptions() {
         return options;
     }
 
-    /**
-     * @param options the options to set
-     */
+    /** {@inheritDoc} */
     public void setOptions(Map<String, Object> options) {
         this.options = options;
     }
 
-    /**
-     * @return the description
-     */
+    /** {@inheritDoc} */
     public String getDescription() {
         return description;
     }
 
-    /**
-     * @param description the description to set
-     */
+    /** {@inheritDoc} */
     public void setDescription(String description) {
         this.description = description;
     }
 
-    /**
-     * @return the capacity
-     */
+    /** {@inheritDoc} */
     public Integer getCapacity() {
         return capacity;
     }
 
-    /**
-     * @param capacity the capacity to set
-     */
+    /** {@inheritDoc} */
     public void setCapacity(Integer capacity) {
         this.capacity = capacity;
     }

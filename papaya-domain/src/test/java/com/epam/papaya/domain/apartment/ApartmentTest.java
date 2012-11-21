@@ -1,13 +1,17 @@
-package com.epam.papaya.api.apartment;
+package com.epam.papaya.domain.apartment;
 
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import org.testng.Assert;
+
+import com.epam.papaya.api.apartment.ApartmentStatus;
+import com.epam.papaya.api.apartment.IRoom;
+import com.epam.papaya.api.apartment.RoomType;
 
 /**
  * @author Tregubenkov_Evgenij
@@ -18,7 +22,7 @@ public class ApartmentTest {
 
     private static final Integer TEST_NUMBER = 2;
 
-    private static final List<Room> TEST_ROOMS = Arrays.asList(new Room[] {new Room()});
+    private static final List<IRoom> TEST_ROOMS = Arrays.asList(new IRoom[] {new Room()});
 
     private static final RoomType TEST_TYPE = RoomType.STANDART;
 

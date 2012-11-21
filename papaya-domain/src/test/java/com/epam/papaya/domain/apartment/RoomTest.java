@@ -1,4 +1,4 @@
-package com.epam.papaya.api.apartment;
+package com.epam.papaya.domain.apartment;
 
 import java.util.ArrayList;
 import java.util.List;

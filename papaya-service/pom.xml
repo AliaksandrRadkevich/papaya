@@ -19,6 +19,11 @@
 
         <dependency>
             <groupId>${project.groupId}</groupId>
+            <artifactId>papaya-domain</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>${project.groupId}</groupId>
             <artifactId>papaya-dao</artifactId>
         </dependency>
 
@@ -45,12 +50,6 @@
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-config</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.testng</groupId>
-            <artifactId>testng</artifactId>
-            <scope>test</scope>
         </dependency>
 
     </dependencies>

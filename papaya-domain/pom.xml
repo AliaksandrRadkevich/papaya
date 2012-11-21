@@ -9,10 +9,15 @@
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>papaya-api</artifactId>
-    <name>papaya-api</name>
-
+    <artifactId>papaya-domain</artifactId>
+    <name>papaya-domain</name>
+    
     <dependencies>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>papaya-api</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>

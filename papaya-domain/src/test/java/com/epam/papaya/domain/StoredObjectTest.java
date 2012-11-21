@@ -1,4 +1,4 @@
-package com.epam.papaya.api;
+package com.epam.papaya.domain;
 
 import org.junit.Assert;
 import org.junit.Test;
