@@ -11,7 +11,7 @@
     <modules>
         <module>papaya-api</module>
         <module>papaya-domain</module>
-        <module>papaya-dao</module>
+        <module>papaya-repository</module>
         <module>papaya-service</module>
         <module>papaya-web</module>
     </modules>
@@ -73,7 +73,7 @@
 
             <dependency>
                 <groupId>${project.groupId}</groupId>
-                <artifactId>papaya-dao</artifactId>
+                <artifactId>papaya-repository</artifactId>
                 <version>${project.version}</version>
             </dependency>
 

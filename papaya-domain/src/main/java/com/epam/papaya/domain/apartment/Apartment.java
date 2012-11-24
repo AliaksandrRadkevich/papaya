@@ -3,16 +3,26 @@ package com.epam.papaya.domain.apartment;
 import java.util.List;
 import java.util.Map;
 
-import com.epam.papaya.api.apartment.*;
+import org.springframework.data.mongodb.core.mapping.DBRef;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+import com.epam.papaya.api.apartment.ApartmentStatus;
+import com.epam.papaya.api.apartment.IApartment;
+import com.epam.papaya.api.apartment.IRoom;
+import com.epam.papaya.api.apartment.RoomType;
 import com.epam.papaya.domain.StoredObject;
 
 /**
  * @author Tregubenkov_Evgenij
  */
+@Document(collection = Apartment.COLLECTION_NAME)
 public class Apartment extends StoredObject implements IApartment {
+
+    public static final String COLLECTION_NAME = "apartment";
 
     private Integer number;
 
+    @DBRef
     private List<IRoom> rooms;
 
     private RoomType type;

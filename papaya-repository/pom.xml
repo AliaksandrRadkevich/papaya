@@ -9,8 +9,8 @@
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>papaya-dao</artifactId>
-    <name>papaya-dao</name>
+    <artifactId>papaya-repository</artifactId>
+    <name>papaya-repository</name>
 
     <dependencies>
         <dependency>
@@ -33,5 +33,10 @@
             <artifactId>spring-context</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 </project>

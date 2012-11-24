@@ -2,13 +2,18 @@ package com.epam.papaya.domain.apartment;
 
 import java.util.List;
 
+import org.springframework.data.mongodb.core.mapping.Document;
+
 import com.epam.papaya.api.apartment.IRoom;
 import com.epam.papaya.domain.StoredObject;
 
 /**
  * @author Tregubenkov_Evgenij
  */
+@Document(collection = Room.COLLECTION_NAME)
 public class Room extends StoredObject implements IRoom {
+
+    public static final String COLLECTION_NAME = "room";
 
     private Double area;
 

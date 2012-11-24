@@ -24,7 +24,7 @@
 
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>papaya-dao</artifactId>
+            <artifactId>papaya-repository</artifactId>
         </dependency>
 
         <dependency>
