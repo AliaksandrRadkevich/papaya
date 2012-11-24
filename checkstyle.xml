@@ -1,0 +1,174 @@
+<?xml version="1.0"?>
+<!DOCTYPE module PUBLIC
+       "-//Puppy Crawl//DTD Check Configuration 1.2//EN"
+       "http://www.puppycrawl.com/dtds/configuration_1_2.dtd">
+
+<module name="Checker">
+
+    <module name="TreeWalker">
+<!-- Checks for Javadoc comments.                     -->
+
+    <module name="JavadocMethod"/>
+    <module name="JavadocType"/>
+    <module name="JavadocVariable"/>
+    <module name="JavadocStyle"/>
+
+<!-- Checks for Naming Conventions.                  -->
+
+    <module name="ConstantName"/>
+    <module name="LocalFinalVariableName"/>
+    <module name="LocalVariableName"/>
+    <module name="MemberName"/>
+    <module name="MethodName"/>
+    <module name="PackageName"/>
+    <module name="ParameterName"/>
+    <module name="StaticVariableName"/>
+    <module name="TypeName">
+        <property name="format" value="^I[a-zA-Z0-9]*$"/>
+        <property name="tokens" value="INTERFACE_DEF"/>
+    </module>
+
+<!-- Checks for imports                              -->
+
+    <module name="AvoidStarImport"/>
+    <module name="RedundantImport"/>
+    <module name="UnusedImports"/>
+    <module name="ImportOrder">
+        <property name="groups" value="java,javax,org,com"/>
+        <property name="separated" value="true"/>
+    </module>
+
+<!-- Checks for Size Violations.                    -->
+
+    <module name="LineLength">
+        <property name="max" value="120"/>
+    </module>
+    <module name="MethodLength">
+        <property name="max" value="50"/>
+        <property name="countEmpty" value="false"/>
+        <property name="severity" value="warning"/>
+    </module>
+    <module name="AnonInnerLength">
+        <property name="max" value="50"/>
+        <property name="severity" value="warning"/>
+    </module>
+    <module name="ParameterNumber">
+        <property name="severity" value="warning"/>
+    </module>
+
+<!-- Checks for whitespace                               -->
+
+    <module name="GenericWhitespace"></module>
+    <module name="EmptyForInitializerPad"/>
+    <module name="EmptyForIteratorPad"/>
+    <module name="MethodParamPad"/>
+    <module name="NoWhitespaceAfter"/>
+    <module name="NoWhitespaceBefore"/>
+    <module name="OperatorWrap"/>
+    <module name="ParenPad"/>
+    <module name="WhitespaceAfter"/>
+    <module name="WhitespaceAround"/>
+
+<!-- Modifier Checks                                    -->
+
+    <module name="ModifierOrder"/>
+    <module name="RedundantModifier"/>
+
+<!-- Checks for blocks. You know, those {}'s         -->
+
+    <module name="EmptyBlock"/>
+    <module name="LeftCurly">
+        <property name="maxLineLength" value="120"/>
+    </module>
+    <module name="NeedBraces"/>
+    <module name="RightCurly"/>
+    <module name="AvoidNestedBlocks"/>
+
+<!-- Checks for common coding problems               -->
+
+    <module name="AvoidInlineConditionals"/>
+    <module name="CovariantEquals"/>
+    <module name="EmptyStatement"/>
+    <module name="EqualsAvoidNull">
+        <property name="ignoreEqualsIgnoreCase" value="true"/>
+    </module>
+    <module name="EqualsHashCode"/>
+    <module name="HiddenField"/>
+    <module name="IllegalInstantiation">
+        <property name="classes" value="java.lang.Boolean"/>
+    </module>
+    <module name="InnerAssignment"/>
+    <module name="MagicNumber">
+        <property name="ignoreNumbers" value="-1,1,0"/>
+        <property name="severity" value="warning"/>
+    </module>
+    <module name="MissingSwitchDefault"/>
+    <module name="ModifiedControlVariable"/>
+    <module name="RedundantThrows"/>
+    <module name="SimplifyBooleanExpression">
+        <property name="severity" value="warning"/>
+    </module>
+    <module name="SimplifyBooleanReturn">
+        <property name="severity" value="warning"/>
+    </module>
+    <module name="StringLiteralEquality"/>
+    <module name="NestedForDepth">
+        <property name="max" value="2"/>
+        <property name="severity" value="warning"/>
+    </module>
+    <module name="NestedIfDepth">
+        <property name="severity" value="warning"/>
+    </module>
+    <module name="NestedTryDepth">
+        <property name="severity" value="warning"/>
+    </module>
+    <module name="NoClone"/>
+    <module name="NoFinalizer"/>
+    <module name="SuperClone"/>
+    <module name="SuperFinalize"/>
+    <module name="IllegalCatch"/>
+    <module name="IllegalThrows"/>
+    <module name="PackageDeclaration"/>
+    <module name="ReturnCount"/>
+    <module name="DeclarationOrder"/>
+    <module name="DefaultComesLast"/>
+    <module name="FallThrough"/>
+    <module name="MultipleStringLiterals">
+        <property name="severity" value="warning"/>
+    </module>
+    <module name="MultipleVariableDeclarations"/>
+    <module name="UnnecessaryParentheses"/>
+    <module name="OneStatementPerLine">
+        <property name="severity" value="warning"/>
+    </module>
+
+<!-- Checks for class design                         -->
+
+    <module name="VisibilityModifier"/>
+    <module name="FinalClass"/>
+    <module name="InterfaceIsType"/>
+    <module name="HideUtilityClassConstructor"/>
+    <module name="InnerTypeLast"/>
+
+<!-- Miscellaneous other checks.                   -->
+
+    <module name="UpperEll"/>
+    <module name="ArrayTypeStyle">
+        <property name="severity" value="warning"/>
+    </module>
+    <module name="OuterTypeFilename"/>
+
+    </module>
+
+    <module name="NewlineAtEndOfFile"/>
+    <module name="FileLength">
+        <property name="max" value="500"/>
+        <property name="severity" value="warning"/>
+    </module>
+    <module name="FileTabCharacter">
+        <property name="eachLine" value="true"/>
+        <property name="fileExtensions" value="{xml,java,jsp,ftl,properties}"/>
+    </module>
+    <module name="Translation"/>
+
+</module>
