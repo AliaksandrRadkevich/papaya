@@ -5,10 +5,19 @@ package com.epam.papaya.api.apartment;
  */
 public enum ApartmentStatus {
 
+    /**
+     * Type for free.
+     */
     FREE("Free"),
 
+    /**
+     * Type for booked.
+     */
     BOOKED("Booked"),
 
+    /**
+     * Type for occupied.
+     */
     OCCUPIED("Occupied");
 
     /**
@@ -18,6 +27,7 @@ public enum ApartmentStatus {
 
     /**
      * Constructor.
+     * 
      * @param status status
      */
     private ApartmentStatus(String status) {

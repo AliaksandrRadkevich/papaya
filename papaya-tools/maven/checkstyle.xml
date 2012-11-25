@@ -93,8 +93,11 @@
         <property name="ignoreEqualsIgnoreCase" value="true"/>
     </module>
     <module name="EqualsHashCode"/>
-    <module name="HiddenField"/>
-    <module name="IllegalInstantiation">
+    <module name="HiddenField">
+        <property name="ignoreConstructorParameter" value="true"/>
+        <property name="ignoreSetter" value="true"/>
+	</module>
+	<module name="IllegalInstantiation">
         <property name="classes" value="java.lang.Boolean"/>
     </module>
     <module name="InnerAssignment"/>

@@ -18,113 +18,143 @@ import com.epam.papaya.domain.StoredObject;
 @Document(collection = Apartment.COLLECTION_NAME)
 public class Apartment extends StoredObject implements IApartment {
 
+    /**
+     * Collection name for mongo.
+     */
     public static final String COLLECTION_NAME = "apartment";
 
+    /**
+     * Number.
+     */
     private Integer number;
 
+    /**
+     * Rooms list.
+     */
     @DBRef
     private List<IRoom> rooms;
 
+    /**
+     * Room type.
+     */
     private RoomType type;
 
+    /**
+     * Price.
+     */
     private Double price;
 
+    /**
+     * Area.
+     */
     private Double area;
 
+    /**
+     * Status.
+     */
     private ApartmentStatus status;
 
+    /**
+     * Options map.
+     */
     private Map<String, Object> options;
 
+    /**
+     * Description.
+     */
     private String description;
 
+    /**
+     * Capacity.
+     */
     private Integer capacity;
 
-    /** {@inheritDoc} */
+    @Override
     public Integer getNumber() {
         return number;
     }
 
-    /** {@inheritDoc} */
+    @Override
     public void setNumber(Integer number) {
         this.number = number;
     }
 
-    /** {@inheritDoc} */
+    @Override
     public List<IRoom> getRooms() {
         return rooms;
     }
 
-    /** {@inheritDoc} */
+    @Override
     public void setRooms(List<IRoom> rooms) {
         this.rooms = rooms;
     }
 
-    /** {@inheritDoc} */
+    @Override
     public RoomType getType() {
         return type;
     }
 
-    /** {@inheritDoc} */
+    @Override
     public void setType(RoomType type) {
         this.type = type;
     }
 
-    /** {@inheritDoc} */
+    @Override
     public Double getPrice() {
         return price;
     }
 
-    /** {@inheritDoc} */
+    @Override
     public void setPrice(Double price) {
         this.price = price;
     }
 
-    /** {@inheritDoc} */
+    @Override
     public Double getArea() {
         return area;
     }
 
-    /** {@inheritDoc} */
+    @Override
     public void setArea(Double area) {
         this.area = area;
     }
 
-    /** {@inheritDoc} */
+    @Override
     public ApartmentStatus getStatus() {
         return status;
     }
 
-    /** {@inheritDoc} */
+    @Override
     public void setStatus(ApartmentStatus status) {
         this.status = status;
     }
 
-    /** {@inheritDoc} */
+    @Override
     public Map<String, Object> getOptions() {
         return options;
     }
 
-    /** {@inheritDoc} */
+    @Override
     public void setOptions(Map<String, Object> options) {
         this.options = options;
     }
 
-    /** {@inheritDoc} */
+    @Override
     public String getDescription() {
         return description;
     }
 
-    /** {@inheritDoc} */
+    @Override
     public void setDescription(String description) {
         this.description = description;
     }
 
-    /** {@inheritDoc} */
+    @Override
     public Integer getCapacity() {
         return capacity;
     }
 
-    /** {@inheritDoc} */
+    @Override
     public void setCapacity(Integer capacity) {
         this.capacity = capacity;
     }

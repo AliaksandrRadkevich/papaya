@@ -1,10 +1,15 @@
 package com.epam.papaya.api.apartment;
 
+/**
+ * @author Tregubenkov_Evgenij
+ */
 public enum RoomType {
+
     /**
      * Type for standart.
      */
     STANDART("Standart"),
+
     /**
      * Type for vip.
      */
@@ -17,6 +22,7 @@ public enum RoomType {
 
     /**
      * Constructor.
+     * 
      * @param type type
      */
     private RoomType(String type) {

@@ -59,9 +59,15 @@
             <scope>provided</scope>
         </dependency>
 
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.10</version>
+        </dependency>
+
     </dependencies>
 
-<build>
+    <build>
         <finalName>${project.context.path}</finalName>
         <resources>
             <resource>

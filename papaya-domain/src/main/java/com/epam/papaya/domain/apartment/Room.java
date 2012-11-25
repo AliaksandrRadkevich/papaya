@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import com.epam.papaya.api.apartment.IPhoto;
 import com.epam.papaya.api.apartment.IRoom;
 import com.epam.papaya.domain.StoredObject;
 
@@ -13,40 +14,52 @@ import com.epam.papaya.domain.StoredObject;
 @Document(collection = Room.COLLECTION_NAME)
 public class Room extends StoredObject implements IRoom {
 
+    /**
+     * Collection name for mongo.
+     */
     public static final String COLLECTION_NAME = "room";
 
+    /**
+     * Area.
+     */
     private Double area;
 
-    private List<byte[]> photos;
+    /**
+     * Photo list.
+     */
+    private List<IPhoto> photos;
 
+    /**
+     * Number of beds.
+     */
     private Integer beds;
 
-    /** {@inheritDoc} */
+    @Override
     public Double getArea() {
         return area;
     }
 
-    /** {@inheritDoc} */
+    @Override
     public void setArea(Double area) {
         this.area = area;
     }
 
-    /** {@inheritDoc} */
-    public List<byte[]> getPhotos() {
+    @Override
+    public List<IPhoto> getPhotos() {
         return photos;
     }
 
-    /** {@inheritDoc} */
-    public void setPhotos(List<byte[]> photos) {
+    @Override
+    public void setPhotos(List<IPhoto> photos) {
         this.photos = photos;
     }
 
-    /** {@inheritDoc} */
+    @Override
     public Integer getBeds() {
         return beds;
     }
 
-    /** {@inheritDoc} */
+    @Override
     public void setBeds(Integer beds) {
         this.beds = beds;
     }

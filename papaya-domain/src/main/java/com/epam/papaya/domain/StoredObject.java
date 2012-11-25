@@ -7,14 +7,17 @@ import com.epam.papaya.api.IStoredObject;
  */
 public class StoredObject implements IStoredObject {
 
+    /**
+     * Id.
+     */
     private Long id;
 
-    /** {@inheritDoc} */
+    @Override
     public Long getId() {
         return id;
     }
 
-    /** {@inheritDoc} */
+    @Override
     public void setId(Long id) {
         this.id = id;
     }

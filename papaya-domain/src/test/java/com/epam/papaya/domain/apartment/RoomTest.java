@@ -4,7 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
+
+import com.epam.papaya.api.apartment.IPhoto;
 
 /**
  * @author Tregubenkov_Evgenij
@@ -15,9 +18,14 @@ public class RoomTest {
 
     private static final Double TEST_AREA = 2.0;
 
-    private static final List<byte[]> TEST_PHOTOS = new ArrayList<>();
+    private static final List<IPhoto> TEST_PHOTOS = new ArrayList<>();
 
     private static final Integer TEST_BEDS = 3;
+
+    @Before
+    public void init() {
+        TEST_PHOTOS.add(new Photo());
+    }
 
     @Test
     public void testGettersAndSetters() {

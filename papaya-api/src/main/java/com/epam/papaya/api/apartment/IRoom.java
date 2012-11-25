@@ -20,12 +20,12 @@ public interface IRoom {
     /**
      * @return the photos
      */
-    List<byte[]> getPhotos();
+    List<IPhoto> getPhotos();
 
     /**
      * @param photos the photos to set
      */
-    void setPhotos(List<byte[]> photos);
+    void setPhotos(List<IPhoto> photos);
 
     /**
      * @return the beds
