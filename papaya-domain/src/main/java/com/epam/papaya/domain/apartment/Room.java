@@ -2,6 +2,9 @@ package com.epam.papaya.domain.apartment;
 
 import java.util.List;
 
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import com.epam.papaya.api.apartment.IPhoto;
@@ -64,4 +67,42 @@ public class Room extends StoredObject implements IRoom {
         this.beds = beds;
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (obj == this) {
+            return true;
+        }
+        if (obj.getClass() != getClass()) {
+            return false;
+        }
+        Room rhs = (Room) obj;
+        return new EqualsBuilder().appendSuper(super.equals(obj))
+                .append("area", rhs.area)
+                .append("photos", rhs.photos)
+                .append("beds", rhs.beds)
+                .isEquals();
+    }
+
+    // hard-coded, randomly chosen, non-zero, odd number
+    // ideally different for each class
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(55, 13)
+                .append(area)
+                .append(photos)
+                .append(beds)
+                .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this)
+                .append("area", area)
+                .append("photos", photos)
+                .append("beds", beds)
+                .toString();
+      }
 }

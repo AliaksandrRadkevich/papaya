@@ -3,6 +3,9 @@ package com.epam.papaya.domain.apartment;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -158,4 +161,61 @@ public class Apartment extends StoredObject implements IApartment {
     public void setCapacity(Integer capacity) {
         this.capacity = capacity;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (obj == this) {
+            return true;
+        }
+        if (obj.getClass() != getClass()) {
+            return false;
+        }
+        Apartment rhs = (Apartment) obj;
+        return new EqualsBuilder().appendSuper(super.equals(obj))
+                .append("number", rhs.number)
+                .append("rooms", rhs.rooms)
+                .append("type", rhs.type)
+                .append("price", rhs.price)
+                .append("area", rhs.area)
+                .append("status", rhs.status)
+                .append("options", rhs.options)
+                .append("description", rhs.description)
+                .append("capacity", rhs.capacity)
+                .isEquals();
+    }
+
+    // hard-coded, randomly chosen, non-zero, odd number
+    // ideally different for each class
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+                .append(number)
+                .append(rooms)
+                .append(type)
+                .append(price)
+                .append(area)
+                .append(status)
+                .append(options)
+                .append(description)
+                .append(capacity)
+                .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this)
+                .append("number", number)
+                .append("rooms", rooms)
+                .append("type", type)
+                .append("price", price)
+                .append("area", area)
+                .append("status", status)
+                .append("options", options)
+                .append("description", description)
+                .append("capacity", capacity)
+                .toString();
+      }
 }
