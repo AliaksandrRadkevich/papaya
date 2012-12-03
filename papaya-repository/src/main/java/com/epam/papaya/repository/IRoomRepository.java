@@ -6,8 +6,7 @@ import com.epam.papaya.domain.apartment.Room;
 
 /**
  * @author Anastasiya_Bomko
- *
  */
-public interface RoomRepository extends MongoRepository<Room, Long> {
+public interface IRoomRepository extends MongoRepository<Room, Long> {
 
 }
