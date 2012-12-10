@@ -5,7 +5,6 @@ import java.util.List;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
-import org.springframework.data.mongodb.core.mapping.Document;
 
 import com.epam.papaya.api.apartment.IPhoto;
 import com.epam.papaya.api.apartment.IRoom;
@@ -14,13 +13,7 @@ import com.epam.papaya.domain.StoredObject;
 /**
  * @author Tregubenkov_Evgenij
  */
-@Document(collection = Room.COLLECTION_NAME)
 public class Room extends StoredObject implements IRoom {
-
-    /**
-     * Collection name for mongo.
-     */
-    public static final String COLLECTION_NAME = "room";
 
     /**
      * Area.

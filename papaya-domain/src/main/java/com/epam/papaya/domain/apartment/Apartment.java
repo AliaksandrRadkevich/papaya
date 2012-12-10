@@ -6,7 +6,6 @@ import java.util.Map;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
-import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import com.epam.papaya.api.apartment.ApartmentStatus;
@@ -34,7 +33,6 @@ public class Apartment extends StoredObject implements IApartment {
     /**
      * Rooms list.
      */
-    @DBRef
     private List<IRoom> rooms;
 
     /**

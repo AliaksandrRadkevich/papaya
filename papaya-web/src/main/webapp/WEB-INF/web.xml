@@ -5,9 +5,7 @@
 
     <context-param>
         <param-name>contextConfigLocation</param-name>
-        <param-value>
-            /WEB-INF/context.xml
-        </param-value>
+        <param-value>/WEB-INF/papaya-web.xml</param-value>
     </context-param>
 
     <listener>
@@ -15,22 +13,22 @@
     </listener>
 
     <servlet>
-        <servlet-name>action</servlet-name>
+        <servlet-name>dispatcher</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
         <init-param>
-            <param-name>namespace</param-name>
-            <param-value>action</param-value>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>/WEB-INF/papaya-servlet.xml</param-value>
         </init-param>
         <load-on-startup>1</load-on-startup>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>action</servlet-name>
-        <url-pattern>/</url-pattern>
+        <servlet-name>dispatcher</servlet-name>
+        <url-pattern>*.html</url-pattern>
     </servlet-mapping>
 
     <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
-
 </web-app>
